@@ -1,0 +1,24 @@
+<form>
+    <div>
+        <label>Id do produto: </label>
+        <input [(ngModel)]="idProduto" type="text" id="idProduto" name="idProduto" placeholder="0" ngControl="idProduto">
+        <br>
+        <label>Nome do produto: </label>
+        <input [(ngModel)]="nomeProduto" type="text" id="nomeProduto" name="nomeProduto" placeholder="Teclado" ngControl="nomeProduto">
+        <br>
+        <label>Descrição do produto: </label>
+        <input type="text" id="descricaoProduto" name="descricaoProduto" placeholder="Teclado mecânico com luzes RGB" ngControl="descricaoProduto" [(ngModel)]="descricaoProduto">
+        <br>
+        <label>Preço do produto: </label>
+        <input type="number" id="precoProduto" name="precoProduto" placeholder="299.00" 
+        ngControl="precoProduto" [(ngModel)]="precoProduto">
+        <br>
+        <label>Quantidade de itens no estoque: </label>
+        <input type="number" id="quantidadeEstoqueProduto" name="quantidadeEstoqueProduto" placeholder="99" ngControl="quantidadeEstoqueProduto" [(ngModel)]="quantidadesEstoqueProduto">
+    </div>
+
+    <div>
+        <button class="button-21" role="button" (click)="atualizarProduto(nomeProduto, idProduto, descricaoProduto, precoProduto, quantidadesEstoqueProduto)">Criar produto</button>
+    </div>
+
+</form>

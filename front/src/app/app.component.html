@@ -1,0 +1,22 @@
+<div class="content" role="main">
+  <h1>Atividade CRUD</h1>
+  
+  <h2>Listagem de Produtos</h2>
+  <button class="button-21" role="button" (click)="changeVisibleGetProdutos()">Ver produtos registrados</button>
+  <app-ler-produtos *ngIf="visibleGetProdutos"></app-ler-produtos>
+
+  <h2>Cadastro de Produto</h2>
+  <button class="button-21" role="button"(click)="changeVisibleCadastro()">Registrar produto</button>
+  <app-cadastro-produto *ngIf="visibleCadastro"></app-cadastro-produto>
+
+  <h2>Update de Produto</h2>
+  <button class="button-21" role="button"(click)="changeVisiblePut()">Atualizar produto</button>
+  <app-update-produto *ngIf="visiblePut"></app-update-produto>
+
+
+  <h2>Remover Produto</h2>
+  <button class="button-21" role="button" (click)="changeVisibleDelete()">Deletar produto</button>
+  <app-delete-produto *ngIf="visibleDelete"></app-delete-produto>
+
+</div>
+

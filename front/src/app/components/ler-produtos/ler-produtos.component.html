@@ -1,0 +1,44 @@
+<div>
+    <button class="button-21" role="button" (click)="changeVisibleLerProdutos()">Retorna produtos</button>
+    
+</div>
+<div *ngIf="visibleLerProdutos">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+        </tr>
+    </table>
+    <table *ngFor="let produto of listaProdutos">
+        <tr>
+            <th>{{produto.id}}</th>
+            <th>{{produto.name}}</th>
+            <th>{{produto.description}}</th>
+            <th>{{produto.price}}</th>
+            <th>{{produto.quantity}}</th>
+        </tr>
+    </table>
+    
+</div>
+<div class="getOneProdutoInput">
+    <button class="button-21" role="button" (click)="retornaProdutoPorId(idProdutoGet)">Retorna produto</button>
+    <input [(ngModel)]="idProdutoGet" type="text" id="idProdutoGet" name="idProdutoGet" placeholder="Digita o id do produto">
+    <div>
+    
+    <p>Nome do produto: {{produtoUnico.name}}.</p>
+    <br>
+    <p>Descrição do produto: {{produtoUnico.description}}.</p>
+    <br>
+    <p>Preço do produto: {{produtoUnico.price}}</p>
+    <br>
+    <p>Quantidade de produtos em estoque: {{produtoUnico.quantity}}</p> 
+    </div>
+</div>
+
+
+
+
+
